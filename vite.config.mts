@@ -14,6 +14,7 @@ const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
 })
 
 export default defineConfig({
+  base: '/jester-website/',
   plugins: [
     vue(),
     transformHtmlPlugin({
