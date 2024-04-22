@@ -58,7 +58,7 @@ pnpm run lint-fix
 pnpm run typecheck
 ```
 
-### Deployes to GitHub Pages
+### Deploys to GitHub Pages
 
 ```
 pnpm run deploy
