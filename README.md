@@ -1,6 +1,6 @@
 # vue3-ts-vite-starter-template
 
-A single page app [Vite](https://vitejs.dev) starter template, created to easily bootstrap Vue.js 3 apps.
+A fork of the [vue3-ts-vite-starter-template](https://github.com/kouts/vue3-ts-vite-starter-template) to create a wedding website.
 
 **Features**
 
@@ -56,6 +56,12 @@ pnpm run lint-fix
 
 ```
 pnpm run typecheck
+```
+
+### Deployes to GitHub Pages
+
+```
+pnpm run deploy
 ```
 
 ### Customize configuration
