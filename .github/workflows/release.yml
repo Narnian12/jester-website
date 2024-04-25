@@ -44,6 +44,9 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Deploy
+        run: pnpm run deploy
   release:
     runs-on: ${{ matrix.os }}
 

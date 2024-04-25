@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import type { Plugin } from 'vite'
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
   name: 'transform-html',
@@ -18,8 +19,13 @@ export default defineConfig({
   plugins: [
     vue(),
     transformHtmlPlugin({
-      title: 'ProjectName',
+      title: 'JesterTemplate',
       description: 'A single page application created using Vue.js 3'
+    }),
+    // @quasar/plugin-vite options list:
+    // https://github.com/quasarframework/quasar/blob/dev/vite-plugin/index.d.ts
+    quasar({
+      sassVariables: 'src/quasar-variables.sass'
     })
   ],
   resolve: {
