@@ -45,11 +45,12 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Set Email
-        run: git config user.email "runner@runner.com"
-
-      - name: Set Username
-        run: git config user.name "Runner"
-
-      - name: Deploy
-        run: pnpm run deploy
+      - name: Deploy to Github Pages
+        end:
+          MY_EMAIL: peterrhcs@gmail.com
+          MY_NAME: Narnian12
+        run: |
+          git config user.email $MY_EMAIL
+          git config user.name $MY_NAME
+          git remote set-url origin https://$MY_NAME:${{ secrets.GH_PAGES_PWD }}@github.com/narnian12/jester-website.git
+          pnpm run deploy
