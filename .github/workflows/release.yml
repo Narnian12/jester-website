@@ -45,41 +45,11 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Set Email
+        run: git config user.email "runner@runner.com"
+
+      - name: Set Username
+        run: git config user.name "Runner"
+
       - name: Deploy
         run: pnpm run deploy
-  release:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [20]
-
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
-
-      - name: Setup pnpm 📦
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9.0.4
-
-      - name: Install dependencies 📦
-        run: pnpm install
-
-      - name: Install semantic-release extra plugins 📦
-        run: pnpm install --save-dev semantic-release @semantic-release/changelog @semantic-release/git
-
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
