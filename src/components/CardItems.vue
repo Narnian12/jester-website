@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
-    <template v-for="(cardInfo, index) in cardInfos" :key="index">
+    <template v-for="cardInfo in cardInfos" :key="cardInfo">
       <q-card class="my-card">
         <q-card-section>
           <div class="text-h6">{{ cardInfo.title }}</div>

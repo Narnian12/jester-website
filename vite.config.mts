@@ -2,7 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import type { Plugin } from 'vite'
-import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
+import { quasar } from '@quasar/vite-plugin'
 
 const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
   name: 'transform-html',
