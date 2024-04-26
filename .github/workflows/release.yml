@@ -46,7 +46,7 @@ jobs:
         run: pnpm run build
 
       - name: Deploy to Github Pages
-        end:
+        env:
           MY_EMAIL: peterrhcs@gmail.com
           MY_NAME: Narnian12
         run: |
