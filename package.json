@@ -1,9 +1,9 @@
 {
-  "name": "vue3-ts-vite-starter-template",
-  "description": "Vue.js 3 TypeScript / Vite starter template with Pinia, Vue Router, Bootstrap and more.",
+  "name": "jester-website",
+  "description": "Vue.js 3 TypeScript / Vite wedding website template.",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
-  "repository": "https://github.com/kouts/vue3-ts-vite-starter-template",
+  "repository": "https://github.com/Narnian12/jester-website",
   "engines": {
     "pnpm": ">=9"
   },
@@ -21,8 +21,10 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@quasar/extras": "^1.16.11",
     "bootstrap": "^5.3.3",
     "pinia": "^2.1.7",
+    "quasar": "^2.15.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
@@ -32,6 +34,7 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@fullhuman/vue-cli-plugin-purgecss": "^5.0.0",
     "@kouts/eslint-config": "^0.0.14",
+    "@quasar/vite-plugin": "^1.6.0",
     "@types/jest": "^29.5.12",
     "@types/jsdom": "^21.1.6",
     "@types/node": "^20.11.30",
@@ -48,7 +51,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "sass": "^1.72.0",
+    "sass": "^1.75.0",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.3",
     "vite": "^5.2.6",

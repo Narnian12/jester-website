@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container">
-      <router-link to="/" class="navbar-brand" @click="collapseNavbar">ProjectName</router-link>
+      <router-link to="/" class="navbar-brand" @click="collapseNavbar">JesterTemplate</router-link>
       <button
         :class="['navbar-toggler', !navbarExpanded && 'collapsed']"
         type="button"

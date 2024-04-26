@@ -3,18 +3,37 @@
     <div class="text-center">
       <img alt="Vue logo" src="@/assets/logo.png" class="text-center" />
     </div>
-    <hello-world msg="Welcome to Vue.js 3 Vite starter template" />
+    <header-typography msg="J & P" />
+    <card-items :card-infos="cardInfos" />
   </div>
 </template>
 
 <script lang="ts">
+import { CardInfo } from '../common/types'
+
+const cardInfos: CardInfo[] = [
+  {
+    title: 'When',
+    content: 'Sometime'
+  },
+  {
+    title: 'Where',
+    content: 'Somewhere'
+  },
+  {
+    title: 'How',
+    content: 'Somehow'
+  }
+]
+
 export default {
   name: 'Home'
 }
 </script>
 
 <script setup lang="ts">
-// https://github.com/vuejs/eslint-plugin-vue/issues/1577
 // eslint-disable-next-line import/first
-import HelloWorld from '@/components/HelloWorld.vue'
+import CardItems from '@/components/CardItems.vue'
+// eslint-disable-next-line import/first
+import HeaderTypography from '@/components/HeaderTypography.vue'
 </script>
