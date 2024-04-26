@@ -44,13 +44,3 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      - name: Deploy to Github Pages
-        env:
-          MY_EMAIL: peterrhcs@gmail.com
-          MY_NAME: Narnian12
-        run: |
-          git config user.email $MY_EMAIL
-          git config user.name $MY_NAME
-          git remote set-url origin https://$MY_NAME:${{ secrets.GH_PAGES_PWD }}@github.com/narnian12/jester-website.git
-          pnpm run deploy
