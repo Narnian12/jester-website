@@ -2,12 +2,10 @@
   <div class="default-page-wrapper">
     <default-nav />
     <slot />
-    <default-footer />
   </div>
 </template>
 
 <script setup lang="ts">
-import DefaultFooter from './DefaultFooter.vue'
 import DefaultNav from './DefaultNav.vue'
 </script>
 
