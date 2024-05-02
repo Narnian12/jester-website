@@ -5,6 +5,7 @@
     </div>
     <header-typography msg="J & P" />
     <card-items :card-infos="cardInfos" />
+    <header-typography msg="Our Story" />
   </div>
 </template>
 
@@ -14,15 +15,15 @@ import { CardInfo } from '../common/types'
 const cardInfos: CardInfo[] = [
   {
     title: 'When',
-    content: 'Sometime'
+    content: 'May 15, 2025'
   },
   {
     title: 'Where',
-    content: 'Somewhere'
+    content: 'Cancun'
   },
   {
     title: 'How',
-    content: 'Somehow'
+    content: 'Plane'
   }
 ]
 
