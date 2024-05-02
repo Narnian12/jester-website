@@ -37,11 +37,12 @@ defineProps({
 })
 </script>
 
-<style lang="sass" scoped>
-.my-card
-  margin-left: auto
-  margin-right: auto
-  width: 100%
-  max-width: 250px
-  text-align: center
+<style lang="scss" scoped>
+.my-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
 </style>
