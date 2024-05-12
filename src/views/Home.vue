@@ -1,11 +1,20 @@
 <template>
   <div class="container">
-    <div class="text-center">
+    <div id="home" class="text-center">
       <img alt="Vue logo" src="@/assets/logo.png" class="text-center" />
     </div>
     <header-typography msg="J & P" />
+    <header-typography id="details" msg="Wedding Details" />
     <card-items :card-infos="cardInfos" />
-    <header-typography msg="Our Story" />
+    <header-typography id="story" msg="Our Story" />
+    <div style="padding: 5em">Hello</div>
+    <header-typography id="schedule" msg="Schedule" />
+    <div style="padding: 5em">Hello</div>
+    <header-typography id="travel" msg="Travel Information" />
+    <div style="padding: 5em">Hello</div>
+    <header-typography id="accomodations" msg="Accomodations" />
+    <div style="padding: 5em">Hello</div>
+    <header-typography id="gallery" msg="Gallery" />
   </div>
 </template>
 
@@ -15,7 +24,7 @@ import { CardInfo } from '../common/types'
 const cardInfos: CardInfo[] = [
   {
     title: 'When',
-    content: 'May 15, 2025'
+    content: 'Someday'
   },
   {
     title: 'Where',
