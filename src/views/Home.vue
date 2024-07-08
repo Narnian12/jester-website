@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="home" class="text-center">
-      <img alt="Vue logo" src="@/assets/logo.png" class="text-center" />
+      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
     <header-typography msg="J & P" />
     <header-typography id="details" msg="Wedding Details" />
@@ -47,3 +47,14 @@ import CardItems from '@/components/CardItems.vue'
 // eslint-disable-next-line import/first
 import HeaderTypography from '@/components/HeaderTypography.vue'
 </script>
+
+<style lang="scss" scoped>
+img.main-photo {
+  height: auto;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
