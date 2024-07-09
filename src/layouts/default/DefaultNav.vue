@@ -56,9 +56,11 @@ const collapseNavbar = () => {
 }
 
 const scrollTo = (id: string) => {
-  const el = document.getElementById(id)
+  const yOffset = -50
+  const element = document.getElementById(id)
+  const y = element!.getBoundingClientRect().top + window.scrollY + yOffset
 
-  el?.scrollIntoView({ behavior: 'smooth' })
+  window.scrollTo({ top: y, behavior: 'smooth' })
 }
 </script>
 
