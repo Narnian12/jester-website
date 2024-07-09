@@ -53,7 +53,7 @@ img.main-photo {
   height: auto;
   width: 100%;
   display: block;
-  max-width: 100%;
+  max-width: 99%;
   margin-left: auto;
   margin-right: auto;
 }
