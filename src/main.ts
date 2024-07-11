@@ -1,6 +1,5 @@
 import App from './App.vue'
 import Default from '@/layouts/default/Default.vue'
-import VueScrollTo from 'vue-scrollto'
 import { Quasar } from 'quasar'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -18,10 +17,6 @@ const app = createApp(App)
 app.component('LayoutDefault', Default)
 app.use(Quasar, {
   plugins: {}
-})
-app.use(VueScrollTo, {
-  offset: -60,
-  easing: 'linear'
 })
 app.use(createPinia())
 app.use(router)

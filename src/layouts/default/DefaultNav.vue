@@ -16,25 +16,25 @@
       <div id="navbarDefault" :class="['collapse navbar-collapse', navbarExpanded && 'show']">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a v-scroll-to="'#home'" href="#">Home</a>
+            <q-btn flat color="primary" @click="scrollTo('home')">Home</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#details'" href="#">Details</a>
+            <q-btn flat color="primary" @click="scrollTo('details')">Details</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#story'" href="#">Story</a>
+            <q-btn flat color="primary" @click="scrollTo('story')">Story</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#schedule'" href="#">Schedule</a>
+            <q-btn flat color="primary" @click="scrollTo('schedule')">Schedule</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#travel'" href="#">Travel</a>
+            <q-btn flat color="primary" @click="scrollTo('travel')">Travel</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#accomodations'" href="#">Accomodations</a>
+            <q-btn flat color="primary" @click="scrollTo('accomodations')">Accomodations</q-btn>
           </li>
           <li class="nav-item">
-            <a v-scroll-to="'#gallery'" href="#">Gallery</a>
+            <q-btn flat color="primary" @click="scrollTo('gallery')">Gallery</q-btn>
           </li>
         </ul>
       </div>
@@ -53,6 +53,14 @@ const toggleNavbar = () => {
 
 const collapseNavbar = () => {
   navbarExpanded.value = false
+}
+
+const scrollTo = (id: string) => {
+  const yOffset = -50
+  const element = document.getElementById(id)
+  const y = element!.getBoundingClientRect().top + window.scrollY + yOffset
+
+  window.scrollTo({ top: y, behavior: 'smooth' })
 }
 </script>
 
