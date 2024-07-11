@@ -3,9 +3,9 @@
     <template v-for="cardInfo in cardInfos" :key="cardInfo">
       <q-card class="my-card">
         <q-card-section>
+          <img :src="cardInfo.icon" alt="Card Icon" class="icon" />
           <div class="text-h6">{{ cardInfo.title }}</div>
         </q-card-section>
-
         <q-card-section class="q-pt-none">
           {{ cardInfo.content }}
         </q-card-section>
@@ -44,5 +44,19 @@ defineProps({
   width: 100%;
   max-width: 250px;
   text-align: center;
+  @media screen and (max-width: 980px) {
+    font-weight: 900;
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+img.icon {
+  width: 25%;
+  max-width: 100px;
+  @media screen and (max-width: 980px) {
+    width: 15%;
+    max_width: 100px;
+  }
 }
 </style>
