@@ -4,7 +4,7 @@
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
     <header-typography msg="J & P" />
-    <q-separator color="black" inset style="size: 5px" />
+    <q-separator color="black" inset />
     <header-typography id="details" msg="Wedding Details" />
     <card-items :card-infos="cardInfos" />
     <header-typography id="story" msg="Our Story" />
