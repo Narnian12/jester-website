@@ -1,62 +1,23 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <router-link to="/" class="navbar-brand" @click="collapseNavbar">JesterTemplate</router-link>
-      <button
-        :class="['navbar-toggler', !navbarExpanded && 'collapsed']"
-        type="button"
-        aria-controls="navbarDefault"
-        :aria-expanded="navbarExpanded"
-        aria-label="Toggle navigation"
-        @click="toggleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div id="navbarDefault" :class="['collapse navbar-collapse', navbarExpanded && 'show']">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('home')">Home</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('details')">Details</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('story')">Story</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('schedule')">Schedule</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('travel')">Travel</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('accomodations')">Accomodations</q-btn>
-          </li>
-          <li class="nav-item">
-            <q-btn flat color="primary" @click="scrollTo('gallery')">Gallery</q-btn>
-          </li>
-        </ul>
-      </div>
+  <nav class="bg-dark fixed-top">
+    <div class="q-pa-md">
+      <q-toolbar class="bg-dark text-white shadow-2 rounded-borders">
+        <q-btn flat label="Homepage" @click="scrollTo('home')" />
+        <!-- <q-space /> -->
+        <q-btn flat label="Details" @click="scrollTo('details')" />
+        <q-btn flat label="Story" @click="scrollTo('story')" />
+        <q-btn flat label="Schedule" @click="scrollTo('schedule')" />
+        <q-btn flat label="Travel" @click="scrollTo('travel')" />
+        <q-btn flat label="Accomodations" @click="scrollTo('accomodations')" />
+        <q-btn flat label="Gallery" @click="scrollTo('gallery')" />
+      </q-toolbar>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const navbarExpanded = ref(false)
-
-const toggleNavbar = () => {
-  navbarExpanded.value = !navbarExpanded.value
-}
-
-const collapseNavbar = () => {
-  navbarExpanded.value = false
-}
-
 const scrollTo = (id: string) => {
-  const yOffset = -50
+  const yOffset = -75
   const element = document.getElementById(id)
   const y = element!.getBoundingClientRect().top + window.scrollY + yOffset
 
@@ -72,6 +33,6 @@ html {
 }
 
 .nav-item {
-  padding: 0em 1em 0em 0em;
+  padding: 0em 0em 0em 0em;
 }
 </style>
