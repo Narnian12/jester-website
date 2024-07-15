@@ -4,16 +4,20 @@
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
     <header-typography msg="J & P" />
+    <q-separator color="black" inset />
     <header-typography id="details" msg="Wedding Details" />
     <card-items :card-infos="cardInfos" />
     <header-typography id="story" msg="Our Story" />
     <div style="padding: 5em">Hello</div>
     <header-typography id="schedule" msg="Schedule" />
     <div style="padding: 5em">Hello</div>
+    <q-separator color="black" inset />
     <header-typography id="travel" msg="Travel Information" />
     <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
+    <q-separator color="black" inset />
     <header-typography id="accomodations" msg="Accomodations" />
     <div style="padding: 5em">Hello</div>
+    <q-separator color="black" inset />
     <header-typography id="gallery" msg="Gallery" />
   </div>
 </template>

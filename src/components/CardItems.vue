@@ -1,3 +1,4 @@
+<!-- This component is primarily used for wedding details -->
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
     <template v-for="cardInfo in cardInfos" :key="cardInfo">
@@ -15,8 +16,6 @@
 </template>
 
 <script lang="ts">
-// Card info - https://quasar.dev/vue-components/card
-
 import type { CardInfo } from '../common/types'
 // Use PropType for custom object types
 import type { PropType } from 'vue'
@@ -48,9 +47,7 @@ defineProps({
     font-weight: 900;
   }
 }
-</style>
 
-<style lang="scss" scoped>
 img.icon {
   width: 25%;
   max-width: 100px;
