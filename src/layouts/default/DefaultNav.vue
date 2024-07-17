@@ -2,14 +2,14 @@
   <nav class="bg-dark fixed-top">
     <div class="gt-sm">
       <q-toolbar class="bg-dark text-white shadow-2 rounded-borders">
-        <q-btn flat label="Homepage" @click="scrollTo('home')" />
-        <!-- <q-space /> -->
-        <q-btn flat label="Details" @click="scrollTo('details')" />
-        <q-btn flat label="Story" @click="scrollTo('story')" />
-        <q-btn flat label="Schedule" @click="scrollTo('schedule')" />
-        <q-btn flat label="Travel" @click="scrollTo('travel')" />
-        <q-btn flat label="Accomodations" @click="scrollTo('accomodations')" />
-        <q-btn flat label="Gallery" @click="scrollTo('gallery')" />
+        <q-btn label="Homepage" @click="scrollTo('home')" />
+        <q-space />
+        <q-btn label="Details" @click="scrollTo('details')" />
+        <q-btn label="Story" @click="scrollTo('story')" />
+        <q-btn label="Schedule" @click="scrollTo('schedule')" />
+        <q-btn label="Travel" @click="scrollTo('travel')" />
+        <q-btn label="Accomodations" @click="scrollTo('accomodations')" />
+        <q-btn label="Gallery" @click="scrollTo('gallery')" />
       </q-toolbar>
     </div>
     <div class="q-gutter-md lt-md">
