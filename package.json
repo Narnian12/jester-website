@@ -30,7 +30,6 @@
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@fullhuman/vue-cli-plugin-purgecss": "^5.0.0",
     "@kouts/eslint-config": "^0.0.14",
     "@quasar/vite-plugin": "^1.6.0",

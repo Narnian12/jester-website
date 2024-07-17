@@ -10,7 +10,6 @@ A fork of the [vue3-ts-vite-starter-template](https://github.com/kouts/vue3-ts-v
 - Vue Router 4 for client-side routing
 - Bootstrap 5.2 for layout and styling
 - SCSS variables inside Vue components
-- Purgecss for eliminating unused CSS
 - Basic multiple layouts feature
 - ESLint config based on `eslint:recommended` with sensible defaults :relaxed:
 - [Prettier](https://prettier.io/) for code formatting
