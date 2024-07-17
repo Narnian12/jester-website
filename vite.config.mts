@@ -30,15 +30,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, '/src'),
-      '~bootstrap': 'bootstrap'
-    }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/scss/variables";`
-      }
+      '@': resolve(__dirname, '/src')
     }
   }
 })
