@@ -8,7 +8,6 @@ A fork of the [vue3-ts-vite-starter-template](https://github.com/kouts/vue3-ts-v
 - Jest for unit testing
 - Pinia for state management
 - Vue Router 4 for client-side routing
-- Bootstrap 5.2 for layout and styling
 - SCSS variables inside Vue components
 - Basic multiple layouts feature
 - ESLint config based on `eslint:recommended` with sensible defaults :relaxed:
