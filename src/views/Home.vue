@@ -29,12 +29,15 @@
     </q-splitter>
   </div>
   <div class="lt-md">
+    <!-- TODO: center and expand the photo on mobile screens -->
     <div id="home" class="text-center">
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
+    <!-- TODO: center all the text -->
     <header-typography msg="J & P" />
     <q-separator color="black" inset />
     <header-typography id="details" msg="Wedding Details" />
+    <!-- TODO: the cards somehow are in front of the menu so when scrolling looks weird... -->
     <card-items :card-infos="cardInfos" />
     <header-typography id="story" msg="Our Story" />
     <div style="padding: 5em">Hello</div>
@@ -44,6 +47,8 @@
     <header-typography id="travel" msg="Travel Information" />
     <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
     <q-separator color="black" inset />
+    <!-- TODO: what do we do when the text is too big and goes past the screen?
+     Should we wrap or reduce the font size? -->
     <header-typography id="accomodations" msg="Accomodations" />
     <div style="padding: 5em">Hello</div>
     <q-separator color="black" inset />
