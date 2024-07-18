@@ -28,7 +28,7 @@
       </template>
     </q-splitter>
   </div>
-  <div class="container lt-md">
+  <div class="lt-md">
     <div id="home" class="text-center">
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
@@ -95,7 +95,7 @@ const splitterModel = ref(55)
 
 <style lang="scss" scoped>
 img.main-photo {
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   display: block;
   max-width: 100%;
