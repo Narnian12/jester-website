@@ -1,58 +1,54 @@
 <template>
-  <div class="container gt-sm">
-    <q-splitter v-model="splitterModel" disable style="height: 85vh" separator-style="visibility: hidden">
-      <template #before>
-        <div class="no-scroll no-scroll" style="overflow: hidden">
-          <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
-        </div>
-      </template>
-      <template #after>
-        <div class="q-pa-md">
-          <header-typography msg="J & P" />
-          <q-separator color="black" inset />
-          <header-typography id="details" msg="Wedding Details" />
-          <card-items :card-infos="cardInfos" />
-          <header-typography id="story" msg="Our Story" />
-          <div style="padding: 5em">Hello</div>
-          <header-typography id="schedule" msg="Schedule" />
-          <div style="padding: 5em">Hello</div>
-          <q-separator color="black" inset />
-          <header-typography id="travel" msg="Travel Information" />
-          <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
-          <q-separator color="black" inset />
-          <header-typography id="accomodations" msg="Accomodations" />
-          <div style="padding: 5em">Hello</div>
-          <q-separator color="black" inset />
-          <header-typography id="gallery" msg="Gallery" />
-        </div>
-      </template>
-    </q-splitter>
+  <!-- This is for larger screens (laptops) -->
+  <div class="gt-sm">
+    <div style="height: 85vh; display: flex">
+      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" style="width: 65vh" />
+      <div style="overflow-y: scroll">
+        <header-typography id="home-lg" msg="J & P" />
+        <q-separator color="black" inset />
+        <header-typography id="details-lg" msg="Wedding Details" />
+        <card-items :card-infos="cardInfos" />
+        <header-typography id="story-lg" msg="Our Story" />
+        <div style="padding: 5em">Hello</div>
+        <header-typography id="schedule-lg" msg="Schedule" />
+        <div style="padding: 5em">Hello</div>
+        <q-separator color="black" inset />
+        <header-typography id="travel-lg" msg="Travel Information" />
+        <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
+        <q-separator color="black" inset />
+        <header-typography id="accomodations-lg" msg="Accomodations" />
+        <div style="padding: 5em">Hello</div>
+        <q-separator color="black" inset />
+        <header-typography id="gallery-lg" msg="Gallery" />
+      </div>
+    </div>
   </div>
+  <!-- This is for smaller screens (phones) -->
   <div class="lt-md">
     <!-- TODO: center and expand the photo on mobile screens -->
-    <div id="home" class="text-center">
+    <div id="home-sm" class="text-center">
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
     </div>
     <!-- TODO: center all the text -->
     <header-typography msg="J & P" />
     <q-separator color="black" inset />
-    <header-typography id="details" msg="Wedding Details" />
+    <header-typography id="details-sm" msg="Wedding Details" />
     <!-- TODO: the cards somehow are in front of the menu so when scrolling looks weird... -->
     <card-items :card-infos="cardInfos" />
-    <header-typography id="story" msg="Our Story" />
+    <header-typography id="story-sm" msg="Our Story" />
     <div style="padding: 5em">Hello</div>
-    <header-typography id="schedule" msg="Schedule" />
+    <header-typography id="schedule-sm" msg="Schedule" />
     <div style="padding: 5em">Hello</div>
     <q-separator color="black" inset />
-    <header-typography id="travel" msg="Travel Information" />
+    <header-typography id="travel-sm" msg="Travel Information" />
     <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
     <q-separator color="black" inset />
     <!-- TODO: what do we do when the text is too big and goes past the screen?
      Should we wrap or reduce the font size? -->
-    <header-typography id="accomodations" msg="Accomodations" />
+    <header-typography id="accomodations-sm" msg="Accomodations" />
     <div style="padding: 5em">Hello</div>
     <q-separator color="black" inset />
-    <header-typography id="gallery" msg="Gallery" />
+    <header-typography id="gallery-sm" msg="Gallery" />
   </div>
 </template>
 
@@ -61,7 +57,6 @@ import calendarImage from '@/assets/icons/calendar.png'
 import howImage from '@/assets/icons/transportation.png'
 import locationImage from '@/assets/icons/location.png'
 import { CardInfo } from '../common/types'
-import { ref } from 'vue'
 
 const cardInfos: CardInfo[] = [
   {
@@ -94,8 +89,6 @@ export default {
 import CardItems from '@/components/CardItems.vue'
 // eslint-disable-next-line import/first
 import HeaderTypography from '@/components/HeaderTypography.vue'
-
-const splitterModel = ref(55)
 </script>
 
 <style lang="scss" scoped>
