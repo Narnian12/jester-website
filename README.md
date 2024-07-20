@@ -65,3 +65,7 @@ pnpm run deploy
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/guide/).
+
+## Reference
+
+Login Auth: https://github.com/thedevdrawer/js-login

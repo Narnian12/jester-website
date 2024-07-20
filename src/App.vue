@@ -9,5 +9,8 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const layout = computed(() => `layout-${route.meta.layout || 'default'}`)
+const layout = computed(() => {
+  // Format the layout name to match component file name
+  return `Layout${route.meta.layout ? route.meta.layout : 'Default'}`
+})
 </script>

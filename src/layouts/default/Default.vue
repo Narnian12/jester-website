@@ -1,13 +1,8 @@
 <template>
   <div class="default-page-wrapper">
-    <default-nav />
     <slot />
   </div>
 </template>
-
-<script setup lang="ts">
-import DefaultNav from './DefaultNav.vue'
-</script>
 
 <style lang="scss">
 /* Sticky footer */
