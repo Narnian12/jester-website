@@ -105,9 +105,5 @@ import HeaderTypography from '@/components/HeaderTypography.vue'
 img.main-photo {
   height: 85vh;
   width: 100vh;
-  // display: block;
-  // max-width: 100%;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 </style>
