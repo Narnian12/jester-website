@@ -57,8 +57,12 @@ const scrollTo = (id: string) => {
 
 <style lang="scss">
 /* Sticky footer */
+nav {
+  z-index: 9999;
+}
 html {
   position: relative;
   min-height: 100%;
+  z-index: 9999;
 }
 </style>

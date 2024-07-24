@@ -37,12 +37,19 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.card-items-container {
+  z-index: 1; /* Set a base z-index for the card items container */
+  position: relative; /* Ensure the z-index is applied */
+}
+
 .my-card {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: 250px;
   text-align: center;
+  z-index: inherit;
+  position: relative;
   @media screen and (max-width: 980px) {
     font-weight: 900;
   }
@@ -51,6 +58,8 @@ defineProps({
 img.icon {
   width: 25%;
   max-width: 100px;
+  z-index: inherit;
+  position: relative;
   @media screen and (max-width: 980px) {
     width: 15%;
     max_width: 100px;

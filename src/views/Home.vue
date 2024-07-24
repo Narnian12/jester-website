@@ -25,9 +25,11 @@
   </div>
   <!-- This is for smaller screens (phones) -->
   <div class="lt-md">
-    <!-- TODO: center and expand the photo on mobile screens -->
+    <!-- TODO: center and expand the photo on mobile screens... double check this-->
     <div id="home-sm" class="text-center">
-      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
+      <div style="height: 45vh; display: flex; justify-content: center; align-items: center">
+        <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
+      </div>
     </div>
     <!-- TODO: center all the text -->
     <header-typography msg="J & P" />
@@ -99,5 +101,46 @@ img.main-photo {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 960px) {
+  .lt-md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lt-md .main-photo {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Keep the aspect ratio */
+  }
+
+  .lt-md .text-center {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lt-md header-typography {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em; /* Make header font smaller */
+  }
+
+  .lt-md header-typography.header-lg {
+    font-size: 0.75em; /* Make header font smaller for larger screens */
+  }
+
+  .lt-md .regular-text {
+    font-size: 0.9em; /* Make regular text font bigger */
+  }
+}
+
+@media (min-width: 961px) {
+  header-typography {
+    font-size: 2em; /* Adjust as needed for larger screens */
+  }
+
+  .regular-text {
+    font-size: 1.5em; /* Adjust as needed for larger screens */
+  }
 }
 </style>

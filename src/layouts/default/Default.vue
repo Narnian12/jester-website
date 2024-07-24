@@ -12,6 +12,7 @@ import DefaultNav from './DefaultNav.vue'
 <style lang="scss">
 /* Sticky footer */
 html {
+  z-index: 9999;
   position: relative;
   min-height: 100%;
 }
