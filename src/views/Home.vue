@@ -1,7 +1,7 @@
 <template>
   <!-- This is for larger screens (laptops) -->
   <div class="gt-sm">
-    <div style="height: 85vh; display: flex">
+    <div style="height: 93vh; display: flex">
       <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
       <div style="overflow-y: scroll; width: 100vh">
         <header-typography id="home-lg" msg="J & P" />
@@ -103,7 +103,7 @@ import HeaderTypography from '@/components/HeaderTypography.vue'
 
 <style lang="scss" scoped>
 img.main-photo {
-  height: 85vh;
+  height: 93vh;
   width: 100vh;
 }
 </style>

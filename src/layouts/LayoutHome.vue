@@ -16,6 +16,6 @@ import DefaultNav from './default/DefaultNav.vue' // Ensure the path is correct
 
 <style lang="scss">
 .home-layout {
-  padding: 4em 0em 0em 0em;
+  padding-top: 3.5em;
 }
 </style>
