@@ -54,11 +54,3 @@ const scrollTo = (id: string) => {
   element!.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
-
-<style lang="scss">
-/* Sticky footer */
-html {
-  position: relative;
-  min-height: 100%;
-}
-</style>
