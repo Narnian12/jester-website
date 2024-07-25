@@ -1,9 +1,9 @@
 <template>
   <!-- This is for larger screens (laptops) -->
   <div class="gt-sm">
-    <div style="height: 85vh; display: flex">
-      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" style="width: 65vh" />
-      <div style="overflow-y: scroll">
+    <div style="height: 93vh; display: flex">
+      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
+      <div style="overflow-y: scroll; width: 100vh">
         <header-typography id="home-lg" msg="J & P" />
         <q-separator color="black" inset />
         <header-typography id="details-lg" msg="Wedding Details" />
@@ -11,7 +11,17 @@
         <header-typography id="story-lg" msg="Our Story" />
         <div style="padding: 5em">Hello</div>
         <header-typography id="schedule-lg" msg="Schedule" />
-        <div style="padding: 5em">Hello</div>
+        <div class="q-px-lg q-py-md">
+          <q-timeline color="primary">
+            <!-- <q-timeline-entry heading> Schedule </q-timeline-entry> -->
+
+            <q-timeline-entry title="Doors Open" subtitle="3:00 PM" />
+            <q-timeline-entry title="Ceremony" subtitle="3:30 PM">
+              <div>Cocktail hour and reception to follow.</div>
+            </q-timeline-entry>
+            <q-timeline-entry title="Doors Close" subtitle="10:00 PM" />
+          </q-timeline>
+        </div>
         <q-separator color="black" inset />
         <header-typography id="travel-lg" msg="Travel Information" />
         <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
@@ -95,12 +105,8 @@ import HeaderTypography from '@/components/HeaderTypography.vue'
 
 <style lang="scss" scoped>
 img.main-photo {
-  height: 85vh;
-  width: 100%;
-  display: block;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 93vh;
+  width: 100vh;
 }
 
 @media (max-width: 960px) {
