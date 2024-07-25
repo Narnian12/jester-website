@@ -8,8 +8,9 @@
         <q-separator color="black" inset />
         <header-typography id="details-lg" msg="Wedding Details" />
         <card-items :card-infos="cardInfos" />
-        <header-typography id="story-lg" msg="Our Story" />
-        <div style="padding: 5em">Hello</div>
+        <div style="text-align: center">
+          <q-btn flat size="lg" class="rsvp-button" href="https://google.com" target="_blank">RSVP</q-btn>
+        </div>
         <header-typography id="schedule-lg" msg="Schedule" />
         <div class="q-px-lg q-py-md">
           <q-timeline color="primary">
@@ -21,6 +22,13 @@
             </q-timeline-entry>
             <q-timeline-entry title="Doors Close" subtitle="10:00 PM" />
           </q-timeline>
+        </div>
+        <header-typography id="story-lg" msg="Our Story" />
+        <div style="padding: 0 5em">
+          <text-body1>We met long ago in a land far away.</text-body1>
+        </div>
+        <div style="padding: 1em 5em">
+          <text-body1>And now we are together yay.</text-body1>
         </div>
         <q-separator color="black" inset />
         <header-typography id="travel-lg" msg="Travel Information" />
@@ -93,5 +101,12 @@ import HeaderTypography from '@/components/HeaderTypography.vue'
 img.main-photo {
   height: 93vh;
   width: 100vh;
+}
+
+.rsvp-button {
+  background: #3a424a;
+  margin: auto;
+  width: 35%;
+  color: white;
 }
 </style>

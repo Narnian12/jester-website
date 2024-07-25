@@ -5,8 +5,8 @@
         <q-btn label="Homepage" @click="scrollTo('home-lg')" />
         <q-space />
         <q-btn label="Details" @click="scrollTo('details-lg')" />
-        <q-btn label="Story" @click="scrollTo('story-lg')" />
         <q-btn label="Schedule" @click="scrollTo('schedule-lg')" />
+        <q-btn label="Story" @click="scrollTo('story-lg')" />
         <q-btn label="Travel" @click="scrollTo('travel-lg')" />
         <q-btn label="Accomodations" @click="scrollTo('accomodations-lg')" />
         <q-btn label="Gallery" @click="scrollTo('gallery-lg')" />
@@ -22,13 +22,13 @@
             <q-item clickable @click="scrollTo('details-sm')">
               <q-item-section>Details</q-item-section>
             </q-item>
+            <q-item clickable @click="scrollTo('schedule-sm')">
+              <q-item-section>Schedule</q-item-section>
+            </q-item>
             <q-item clickable @click="scrollTo('story-sm')">
               <q-item-section>Story</q-item-section>
             </q-item>
             <q-separator />
-            <q-item clickable @click="scrollTo('schedule-sm')">
-              <q-item-section>Schedule</q-item-section>
-            </q-item>
             <q-item clickable @click="scrollTo('travel-sm')">
               <q-item-section>Travel</q-item-section>
             </q-item>
