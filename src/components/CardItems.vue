@@ -3,12 +3,11 @@
   <div class="q-pa-md row items-start q-gutter-md">
     <template v-for="cardInfo in cardInfos" :key="cardInfo">
       <q-card class="my-card">
-        <q-card-section>
-          <img :src="cardInfo.icon" alt="Card Icon" class="icon" />
-          <div class="text-h6">{{ cardInfo.title }}</div>
-        </q-card-section>
-        <q-card-section class="q-pt-none">
-          {{ cardInfo.content }}
+        <q-card-section horizontal class="my-card-section">
+          <span class="material-icons material-icons-override">{{ cardInfo.icon }}</span>
+          <div>
+            <h5>{{ cardInfo.content }}</h5>
+          </div>
         </q-card-section>
       </q-card>
     </template>
@@ -43,17 +42,17 @@ defineProps({
   width: 100%;
   max-width: 250px;
   text-align: center;
-  @media screen and (max-width: 980px) {
-    font-weight: 900;
-  }
 }
 
-img.icon {
-  width: 25%;
-  max-width: 100px;
-  @media screen and (max-width: 980px) {
-    width: 15%;
-    max_width: 100px;
-  }
+.my-card-section {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.material-icons-override {
+  font-size: 24px;
+  padding-right: 10px;
 }
 </style>

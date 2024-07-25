@@ -63,26 +63,17 @@
 </template>
 
 <script lang="ts">
-import calendarImage from '@/assets/icons/calendar.png'
-import howImage from '@/assets/icons/transportation.png'
-import locationImage from '@/assets/icons/location.png'
 import { CardInfo } from '../common/types'
 
 const cardInfos: CardInfo[] = [
   {
-    icon: calendarImage,
-    title: 'When',
-    content: 'Someday'
+    // Specify icon using ligature (textual name) - https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web
+    icon: 'event',
+    content: '01/01/2025'
   },
   {
-    icon: locationImage,
-    title: 'Where',
-    content: 'Cancun'
-  },
-  {
-    icon: howImage,
-    title: 'How',
-    content: 'Plane flight'
+    icon: 'place',
+    content: 'Chicago, IL'
   }
 ]
 
@@ -90,9 +81,6 @@ export default {
   name: 'Home'
 }
 </script>
-<!-- Download the Calendar Icon: Go to the Flaticon site, search for the calendar -->
-<!-- icon you like, and download it. If the icons are provided under a free license-->
-<!-- they usually require attribution, and you should provide it somewhere appropriate in your app-->
 
 <script setup lang="ts">
 // eslint-disable-next-line import/first
