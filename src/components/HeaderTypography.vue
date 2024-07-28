@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col text-center">
-      <h1 class="msg">{{ msg }}</h1>
+      <h1 class="section-header">{{ msg }}</h1>
     </div>
   </div>
 </template>
@@ -22,7 +22,11 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-h1.msg {
-  color: $gray-900;
+.section-header {
+  font-family: $header-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: $secondary;
 }
 </style>

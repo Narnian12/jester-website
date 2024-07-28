@@ -1,109 +1,115 @@
 <template>
   <!-- This is for larger screens (laptops) -->
-  <div class="gt-sm">
+  <div class="gt-sm home-screen">
     <div style="height: 93vh; display: flex">
-      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
+      <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-wide" />
       <div style="overflow-y: scroll; width: 100vh">
         <header-typography id="home-lg" msg="J & P" />
-        <q-separator color="black" inset />
+        <div class="separator"></div>
         <header-typography id="details-lg" msg="Wedding Details" />
-        <card-items :card-infos="cardInfos" />
-        <header-typography id="story-lg" msg="Our Story" />
-        <div style="padding: 5em">Hello</div>
-        <header-typography id="schedule-lg" msg="Schedule" />
-        <div class="q-px-lg q-py-md">
-          <q-timeline color="primary">
-            <!-- <q-timeline-entry heading> Schedule </q-timeline-entry> -->
-
-            <q-timeline-entry title="Doors Open" subtitle="3:00 PM" />
-            <q-timeline-entry title="Ceremony" subtitle="3:30 PM">
-              <div>Cocktail hour and reception to follow.</div>
-            </q-timeline-entry>
-            <q-timeline-entry title="Doors Close" subtitle="10:00 PM" />
-          </q-timeline>
-        </div>
-        <q-separator color="black" inset />
+        <detail-container />
+        <div class="separator"></div>
         <header-typography id="travel-lg" msg="Travel Information" />
-        <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
-        <q-separator color="black" inset />
-        <header-typography id="accomodations-lg" msg="Accomodations" />
-        <div style="padding: 5em">Hello</div>
-        <q-separator color="black" inset />
+        <travel-container />
+        <div class="separator"></div>
+        <header-typography id="schedule-lg" msg="Schedule" />
+        <schedule-container />
+        <div class="separator"></div>
+        <header-typography id="story-lg" msg="Our Story" />
+        <story-container />
+        <div class="separator"></div>
+        <header-typography id="registry-lg" msg="Registry" />
+        <registry-container />
+        <div class="separator"></div>
         <header-typography id="gallery-lg" msg="Gallery" />
+        <gallery-container />
+        <div class="separator"></div>
+        <header-typography id="contact-lg" msg="Contact" />
+        <contact-container />
       </div>
     </div>
   </div>
   <!-- This is for smaller screens (phones) -->
-  <div class="lt-md">
-    <!-- TODO: center and expand the photo on mobile screens -->
+  <div class="lt-md home-screen">
     <div id="home-sm" class="text-center">
-      <img alt="Main Photo" src="@/assets/duck.jpg" class="main-photo" />
+      <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-mobile" />
     </div>
-    <!-- TODO: center all the text -->
     <header-typography msg="J & P" />
-    <q-separator color="black" inset />
+    <div class="separator"></div>
     <header-typography id="details-sm" msg="Wedding Details" />
     <!-- TODO: the cards somehow are in front of the menu so when scrolling looks weird... -->
-    <card-items :card-infos="cardInfos" />
-    <header-typography id="story-sm" msg="Our Story" />
-    <div style="padding: 5em">Hello</div>
-    <header-typography id="schedule-sm" msg="Schedule" />
-    <div style="padding: 5em">Hello</div>
-    <q-separator color="black" inset />
+    <detail-container />
+    <div class="separator"></div>
     <header-typography id="travel-sm" msg="Travel Information" />
-    <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
-    <q-separator color="black" inset />
+    <travel-container />
+    <div class="separator"></div>
+    <header-typography id="schedule-sm" msg="Schedule" />
+    <schedule-container />
+    <div class="separator"></div>
+    <header-typography id="story-sm" msg="Our Story" />
+    <story-container />
+    <div class="separator"></div>
+    <header-typography id="registry-sm" msg="Registry" />
+    <registry-container />
+    <div class="separator"></div>
     <!-- TODO: what do we do when the text is too big and goes past the screen?
      Should we wrap or reduce the font size? -->
-    <header-typography id="accomodations-sm" msg="Accomodations" />
-    <div style="padding: 5em">Hello</div>
-    <q-separator color="black" inset />
     <header-typography id="gallery-sm" msg="Gallery" />
+    <gallery-container />
+    <div class="separator"></div>
+    <header-typography id="contact-sm" msg="Contact" />
+    <contact-container />
   </div>
 </template>
 
 <script lang="ts">
-import calendarImage from '@/assets/icons/calendar.png'
-import howImage from '@/assets/icons/transportation.png'
-import locationImage from '@/assets/icons/location.png'
-import { CardInfo } from '../common/types'
-
-const cardInfos: CardInfo[] = [
-  {
-    icon: calendarImage,
-    title: 'When',
-    content: 'Someday'
-  },
-  {
-    icon: locationImage,
-    title: 'Where',
-    content: 'Cancun'
-  },
-  {
-    icon: howImage,
-    title: 'How',
-    content: 'Plane flight'
-  }
-]
+import ContactContainer from '@/components/ContactContainer.vue'
+import DetailContainer from '@/components/DetailContainer.vue'
+import GalleryContainer from '@/components/GalleryContainer.vue'
+import HeaderTypography from '@/components/HeaderTypography.vue'
+import RegistryContainer from '@/components/RegistryContainer.vue'
+import ScheduleContainer from '@/components/ScheduleContainer.vue'
+import StoryContainer from '@/components/StoryContainer.vue'
+import TravelContainer from '@/components/TravelContainer.vue'
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    ContactContainer,
+    DetailContainer,
+    GalleryContainer,
+    HeaderTypography,
+    RegistryContainer,
+    ScheduleContainer,
+    StoryContainer,
+    TravelContainer
+  }
 }
 </script>
 <!-- Download the Calendar Icon: Go to the Flaticon site, search for the calendar -->
 <!-- icon you like, and download it. If the icons are provided under a free license-->
 <!-- they usually require attribution, and you should provide it somewhere appropriate in your app-->
 
-<script setup lang="ts">
-// eslint-disable-next-line import/first
-import CardItems from '@/components/CardItems.vue'
-// eslint-disable-next-line import/first
-import HeaderTypography from '@/components/HeaderTypography.vue'
-</script>
-
 <style lang="scss" scoped>
-img.main-photo {
-  height: 93vh;
-  width: 100vh;
+.home-screen {
+  background-color: $lighter;
+}
+
+.separator {
+  width: 80%;
+  background-color: $secondary;
+  height: 1px;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+img.main-photo-wide {
+  height: 100%;
+  width: 800px;
+}
+
+img.main-photo-mobile {
+  height: auto;
+  width: 100%;
 }
 </style>
