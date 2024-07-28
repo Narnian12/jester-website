@@ -5,30 +5,25 @@
 </template>
 
 <script lang="ts">
-import DetailRowView from '@/components/DetailRowView.vue'
-import attireImage from '@/assets/icons/attire.png'
-import calendarImage from '@/assets/icons/calendar.png'
-import locationImage from '@/assets/icons/location.png'
+import DetailRowView from '../views/DetailRowView.vue'
 import { DetailRow } from '../common/types'
 
 const detailRows: DetailRow[] = [
   {
-    icon: calendarImage,
-    title: 'Saturday, December 25, 2024',
-    content1: 'Doors open at 3PM',
-    content2: 'Start promptly at 3:30PM'
+    // Specify icon using ligature (textual name) - https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web
+    icon: 'event',
+    title: 'Saturday, December 25, 2024'
   },
   {
-    icon: locationImage,
+    icon: 'place',
     title: 'The Westin Resort & Spa, Cancun',
     content1: 'Km 20.5, Blvd. Kukulcan, Zona Hotelera',
     content2: '77500 Cancún, Q.R., Mexico'
   },
   {
-    icon: attireImage,
-    title: 'Attire',
-    content1: 'Black Tie',
-    content2: 'What black tie is'
+    icon: 'checkroom',
+    title: 'Black Tie Optional',
+    content1: 'What black tie is'
   }
 ]
 

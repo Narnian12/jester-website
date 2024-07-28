@@ -15,7 +15,9 @@ const transformHtmlPlugin = (data: Record<string, string>): Plugin => ({
 })
 
 export default defineConfig({
-  base: '/jester-website/',
+  // Base path needs to be the same as router path
+  // https://github.com/vuejs/router/issues/1550
+  base: '/',
   plugins: [
     vue(),
     transformHtmlPlugin({

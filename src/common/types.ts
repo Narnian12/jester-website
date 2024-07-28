@@ -2,8 +2,8 @@
 export interface DetailRow {
   icon: string
   title: string
-  content1: string
-  content2: string
+  content1?: string
+  content2?: string
 }
 
 export interface TravelCard {
@@ -17,4 +17,10 @@ export interface RegistryCard {
   image: string
   title: string
   content: string
+}
+
+export interface ScheduleInfo {
+  event: string
+  time: string
+  additional?: string
 }

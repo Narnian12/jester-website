@@ -3,7 +3,7 @@
     <template v-for="detailRow in detailRows" :key="detailRow">
       <q-card class="card-layout self-center">
         <q-card-section class="card-content">
-          <img :src="detailRow.icon" alt="Card Icon" class="icon" />
+          <span class="material-icons material-icons-override">{{ detailRow.icon }}</span>
           <div class="text-container">
             <div class="text-top">{{ detailRow.title }}</div>
             <div class="text-bottom">{{ detailRow.content1 }}</div>
@@ -73,5 +73,10 @@ img.icon {
   color: $secondary;
   font-family: $body-font;
   font-size: 14px;
+}
+
+.material-icons-override {
+  font-size: 32px;
+  margin-right: 50px;
 }
 </style>

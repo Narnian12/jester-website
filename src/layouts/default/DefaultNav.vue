@@ -2,7 +2,7 @@
   <nav class="nav-bar fixed-top">
     <div class="gt-sm">
       <q-toolbar class="nav-bar-component text-white">
-        <q-btn label="Homepage" @click="scrollTo('home-lg')" />
+        <q-btn label="Home" @click="scrollTo('home-lg')" />
         <q-space />
         <q-btn label="Details" @click="scrollTo('details-lg')" />
         <q-btn label="Travel" @click="scrollTo('travel-lg')" />

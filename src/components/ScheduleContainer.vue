@@ -1,22 +1,39 @@
 <template>
   <div class="container section-container">
-    <div class="scheduling">
-      <q-timeline layout="comfortable" color="secondary">
-        <q-timeline-entry title="Doors Open" subtitle="3:00 PM" />
-        <q-timeline-entry title="Ceremony" subtitle="3:30 PM">
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicied do eiusmod te laborum.</div>
-        </q-timeline-entry>
-        <q-timeline-entry title="Cocktail Hour" subtitle="5:30 PM" />
-        <q-timeline-entry title="Reception" subtitle="7:30 PM" />
-        <q-timeline-entry title="Doors Close" subtitle="10:00 PM" />
-      </q-timeline>
-    </div>
+    <schedule-view :schedule-infos="scheduleInfos" />
   </div>
 </template>
 
 <script lang="ts">
+import ScheduleView from '../views/ScheduleView.vue'
+import { ScheduleInfo } from '@/common/types'
+
+const scheduleInfos: ScheduleInfo[] = [
+  {
+    event: 'Doors Open',
+    time: '3:00 PM'
+  },
+  {
+    event: 'Ceremony',
+    time: '3:30 PM',
+    additional: 'Cocktail hour and reception to follow.'
+  },
+  {
+    event: 'Doors Close',
+    time: '10:00 PM'
+  }
+]
+
 export default {
-  name: 'ScheduleContainer'
+  name: 'ScheduleContainer',
+  components: {
+    ScheduleView
+  },
+  data() {
+    return {
+      scheduleInfos
+    }
+  }
 }
 </script>
 

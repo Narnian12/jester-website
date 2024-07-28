@@ -30,7 +30,7 @@ export default {
 
     const handleSubmit = () => {
       if (password.value === 'password123') {
-        localStorage.setItem('auth', '1')
+        localStorage.setItem('auth', 'true')
         router.push('/') // Redirect to Home page
       } else {
         errorMessage.value = 'Password incorrect. Please contact Peter for access.'
