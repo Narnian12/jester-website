@@ -12,32 +12,14 @@
           <q-btn flat size="lg" class="rsvp-button" href="https://google.com" target="_blank">RSVP</q-btn>
         </div>
         <header-typography id="schedule-lg" msg="Schedule" />
-        <div class="q-px-lg q-py-md">
-          <q-timeline color="primary">
-            <!-- <q-timeline-entry heading> Schedule </q-timeline-entry> -->
-
-            <q-timeline-entry title="Doors Open" subtitle="3:00 PM" />
-            <q-timeline-entry title="Ceremony" subtitle="3:30 PM">
-              <div>Cocktail hour and reception to follow.</div>
-            </q-timeline-entry>
-            <q-timeline-entry title="Doors Close" subtitle="10:00 PM" />
-          </q-timeline>
-        </div>
+        <schedule-component :schedule-infos="scheduleInfos" />
         <header-typography id="story-lg" msg="Our Story" />
         <div style="padding: 0 5em">
-          <text-body1>We met long ago in a land far away.</text-body1>
+          <div>We met long ago in a land far away.</div>
         </div>
         <div style="padding: 1em 5em">
-          <text-body1>And now we are together yay.</text-body1>
+          <div>And now we are together yay.</div>
         </div>
-        <q-separator color="black" inset />
-        <header-typography id="travel-lg" msg="Travel Information" />
-        <div style="padding: 5em">O'HAre plane or amtrak water powered steam train</div>
-        <q-separator color="black" inset />
-        <header-typography id="accomodations-lg" msg="Accomodations" />
-        <div style="padding: 5em">Hello</div>
-        <q-separator color="black" inset />
-        <header-typography id="gallery-lg" msg="Gallery" />
       </div>
     </div>
   </div>
@@ -71,7 +53,7 @@
 </template>
 
 <script lang="ts">
-import { CardInfo } from '../common/types'
+import { CardInfo, ScheduleInfo } from '../common/types'
 
 const cardInfos: CardInfo[] = [
   {
@@ -85,6 +67,22 @@ const cardInfos: CardInfo[] = [
   }
 ]
 
+const scheduleInfos: ScheduleInfo[] = [
+  {
+    event: 'Doors Open',
+    time: '3:00 PM'
+  },
+  {
+    event: 'Ceremony',
+    time: '3:30 PM',
+    additional: 'Cocktail hour and reception to follow.'
+  },
+  {
+    event: 'Doors Close',
+    time: '10:00 PM'
+  }
+]
+
 export default {
   name: 'Home'
 }
@@ -94,13 +92,15 @@ export default {
 // eslint-disable-next-line import/first
 import CardItems from '@/components/CardItems.vue'
 // eslint-disable-next-line import/first
+import ScheduleComponent from '@/components/ScheduleComponent.vue'
+// eslint-disable-next-line import/first
 import HeaderTypography from '@/components/HeaderTypography.vue'
 </script>
 
 <style lang="scss" scoped>
 img.main-photo {
   height: 93vh;
-  width: 100vh;
+  width: 140vh;
 }
 
 .rsvp-button {
