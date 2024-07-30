@@ -15,15 +15,12 @@ import DefaultNav from './default/DefaultNav.vue' // Ensure the path is correct
 </script>
 
 <style lang="scss">
-@media (min-width: 960px) {
-  .home-layout {
+.home-layout {
+  @media (min-width: 1024px) {
     padding-top: 3.5em;
     background-color: $lighter;
   }
-}
-
-@media (max-width: 960px) {
-  .home-layout {
+  @media (max-width: 1024px) {
     padding-top: 2.5em;
     background-color: $lighter;
   }

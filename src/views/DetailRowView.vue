@@ -70,7 +70,13 @@ defineProps({
 }
 
 .material-icons-override {
-  font-size: 32px;
-  margin-right: 50px;
+  @media (min-width: 1024px) {
+    margin-right: 50px;
+    font-size: 32px;
+  }
+  @media (max-width: 1024px) {
+    margin-right: 20px;
+    font-size: 24px;
+  }
 }
 </style>

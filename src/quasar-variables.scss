@@ -18,7 +18,7 @@ $body-font: 'Lato', sans-serif;
 
 @mixin section-container($color: white) {
   background-color: $color;
-  // min-width: 400px;
+  min-width: 350px;
   max-width: 500px;
   width: 80%;
   height: auto;
