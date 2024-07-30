@@ -2,7 +2,7 @@
   <div class="login">
     <h1 class="header">PJ</h1>
     <div class="container">
-      <h2 class="text-center">Enter Password</h2>
+      <h2 class="directions text-center">Enter Password</h2>
       <br />
       <form class="loginForm" @submit.prevent="handleSubmit">
         <div class="input-group">
@@ -30,10 +30,10 @@ export default {
 
     const handleSubmit = () => {
       if (password.value === 'password123') {
-        localStorage.setItem('auth', '1')
+        localStorage.setItem('auth', 'true')
         router.push('/') // Redirect to Home page
       } else {
-        errorMessage.value = 'Password incorrect. Please contact Peter at peterrhcs@gmail.com for access.'
+        errorMessage.value = 'Password incorrect. Please contact Peter for access.'
       }
     }
 
@@ -43,16 +43,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: $body-font;
   background-color: #fff;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h1,
@@ -70,7 +68,12 @@ h6 {
   padding: 20;
   margin: 50;
   text-align: center;
-  color: #3a424a;
+  color: $secondary;
+}
+
+.directions {
+  font-family: $body-font;
+  font-size: 18px;
 }
 
 .container {
@@ -87,19 +90,19 @@ h6 {
 }
 
 .login .container {
-  color: #3a424a;
+  color: $secondary;
   max-width: 400px;
   margin: 3rem auto;
   padding: 50px;
   border-radius: 15px;
-  background-color: #bcd3e0;
+  background-color: $primary;
 }
 
 .input {
   appearance: none;
   display: block;
   width: 100%;
-  color: #333;
+  color: $secondary;
   border: 1px solid rbg(180, 180, 180);
   background-color: white;
   padding: 1rem;
@@ -131,7 +134,7 @@ h6 {
 }
 
 .button {
-  background-color: #3a424a;
+  background-color: $secondary;
   padding: 1rem;
   border: none;
   color: #fff;

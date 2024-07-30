@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 $primary: #bcd3e0;
 $secondary: #3a424a;
-$accent: #9c27b0;
+$lighter: #d9e5ed;
+$darker: #2b3035;
 
 $dark: #1d1d1d;
 
@@ -9,4 +13,16 @@ $negative: #c10015;
 $info: #31ccec;
 $warning: #f2c037;
 
-$gray-900: #273849;
+$header-font: 'Bona Nova SC', serif;
+$body-font: 'Lato', sans-serif;
+
+@mixin section-container($color: white) {
+  background-color: $color;
+  min-width: 350px;
+  max-width: 500px;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}

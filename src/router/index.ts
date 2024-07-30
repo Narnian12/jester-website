@@ -23,15 +23,17 @@ const routes = [
 
 // Create router instance
 const router = createRouter({
+  // Base path needs to be the same as config path
+  // https://github.com/vuejs/router/issues/1550
   history: createWebHistory(),
   routes
 })
 
 // Navigation guard for authentication
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = !!localStorage.getItem('auth') // Check if authenticated
+router.beforeEach((to, _, next) => {
+  const isAuthenticated = JSON.parse(localStorage.getItem('auth') ?? 'false') // Check if authenticated
 
-  if (to.meta.requiresAuth && !isAuthenticated) {
+  if (to.meta.requiresAuth && isAuthenticated === false) {
     next('/login') // Redirect to login if not authenticated
   } else {
     next() // Proceed to the route
