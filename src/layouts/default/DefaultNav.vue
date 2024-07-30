@@ -2,19 +2,19 @@
   <nav class="nav-bar fixed-top">
     <div class="gt-sm">
       <q-toolbar class="nav-bar-component text-white">
-        <q-btn label="Home" @click="scrollTo('home-lg')" />
+        <q-btn label="Home" text-color="white" flat @click="scrollTo('home-lg')" />
         <q-space />
-        <q-btn label="Details" @click="scrollTo('details-lg')" />
-        <q-btn label="Travel" @click="scrollTo('travel-lg')" />
-        <q-btn label="Schedule" @click="scrollTo('schedule-lg')" />
-        <q-btn label="Story" @click="scrollTo('story-lg')" />
-        <q-btn label="Registry" @click="scrollTo('registry-lg')" />
-        <q-btn label="Gallery" @click="scrollTo('gallery-lg')" />
-        <q-btn label="Contact" @click="scrollTo('contact-lg')" />
+        <q-btn label="Details" text-color="white" flat @click="scrollTo('details-lg')" />
+        <q-btn label="Travel" text-color="white" flat @click="scrollTo('travel-lg')" />
+        <q-btn label="Schedule" text-color="white" flat @click="scrollTo('schedule-lg')" />
+        <q-btn label="Story" text-color="white" flat @click="scrollTo('story-lg')" />
+        <q-btn label="Registry" text-color="white" flat @click="scrollTo('registry-lg')" />
+        <q-btn label="Gallery" text-color="white" flat @click="scrollTo('gallery-lg')" />
+        <q-btn label="Contact" text-color="white" flat @click="scrollTo('contact-lg')" />
       </q-toolbar>
     </div>
-    <div class="q-gutter-md lt-md">
-      <q-btn color="$darker" label="Menu">
+    <div class="lt-md nav-bar-component">
+      <q-btn color="$darker" text-color="white" flat label="Menu">
         <q-menu auto-close>
           <q-list style="min-width: 100px">
             <q-item clickable @click="scrollTo('home-sm')">
@@ -60,6 +60,7 @@ const scrollTo = (id: string) => {
 <style lang="scss">
 .nav-bar {
   background-color: $darker;
+  z-index: 1;
 }
 
 .nav-bar-component {

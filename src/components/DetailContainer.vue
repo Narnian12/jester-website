@@ -12,7 +12,7 @@ const detailRows: DetailRow[] = [
   {
     // Specify icon using ligature (textual name) - https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web
     icon: 'event',
-    title: 'Saturday, December 25, 2024'
+    title: 'December 25, 2024'
   },
   {
     icon: 'place',

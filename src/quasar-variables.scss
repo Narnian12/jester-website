@@ -17,12 +17,12 @@ $header-font: 'Bona Nova SC', serif;
 $body-font: 'Lato', sans-serif;
 
 @mixin section-container($color: white) {
-    background-color: $color;
-    min-width: 400px;
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 60px;
+  background-color: $color;
+  // min-width: 400px;
+  max-width: 500px;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 60px;
 }
-

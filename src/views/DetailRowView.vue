@@ -52,12 +52,6 @@ defineProps({
   align-items: center;
 }
 
-img.icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 50px;
-}
-
 .text-container {
   display: flex;
   flex-direction: column; // Stack text vertically

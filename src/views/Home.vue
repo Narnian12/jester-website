@@ -1,43 +1,38 @@
 <template>
   <!-- This is for larger screens (laptops) -->
-  <div class="gt-sm home-screen">
-    <div style="height: 93vh; display: flex">
-      <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-wide" />
-      <div style="overflow-y: scroll; width: 100vh">
-        <header-typography id="home-lg" msg="J & P" />
-        <div class="separator"></div>
-        <header-typography id="details-lg" msg="Wedding Details" />
-        <detail-container />
-        <div class="separator"></div>
-        <header-typography id="travel-lg" msg="Travel Information" />
-        <travel-container />
-        <div class="separator"></div>
-        <header-typography id="schedule-lg" msg="Schedule" />
-        <schedule-container />
-        <div class="separator"></div>
-        <header-typography id="story-lg" msg="Our Story" />
-        <story-container />
-        <div class="separator"></div>
-        <header-typography id="registry-lg" msg="Registry" />
-        <registry-container />
-        <div class="separator"></div>
-        <header-typography id="gallery-lg" msg="Gallery" />
-        <gallery-container />
-        <div class="separator"></div>
-        <header-typography id="contact-lg" msg="Contact" />
-        <contact-container />
-      </div>
+  <div class="gt-sm large-screen">
+    <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-wide" />
+    <div style="overflow-y: scroll; width: 100vh">
+      <header-typography id="home-lg" msg="J & P" />
+      <div class="separator"></div>
+      <header-typography id="details-lg" msg="Wedding Details" />
+      <detail-container />
+      <div class="separator"></div>
+      <header-typography id="travel-lg" msg="Travel Information" />
+      <travel-container />
+      <div class="separator"></div>
+      <header-typography id="schedule-lg" msg="Schedule" />
+      <schedule-container />
+      <div class="separator"></div>
+      <header-typography id="story-lg" msg="Our Story" />
+      <story-container />
+      <div class="separator"></div>
+      <header-typography id="registry-lg" msg="Registry" />
+      <registry-container />
+      <div class="separator"></div>
+      <header-typography id="gallery-lg" msg="Gallery" />
+      <gallery-container />
+      <div class="separator"></div>
+      <header-typography id="contact-lg" msg="Contact" />
+      <contact-container />
     </div>
   </div>
   <!-- This is for smaller screens (phones) -->
-  <div class="lt-md home-screen">
-    <div id="home-sm" class="text-center">
-      <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-mobile" />
-    </div>
+  <div class="lt-md small-screen">
+    <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-mobile" />
     <header-typography msg="J & P" />
     <div class="separator"></div>
     <header-typography id="details-sm" msg="Wedding Details" />
-    <!-- TODO: the cards somehow are in front of the menu so when scrolling looks weird... -->
     <detail-container />
     <div class="separator"></div>
     <header-typography id="travel-sm" msg="Travel Information" />
@@ -86,13 +81,16 @@ export default {
   }
 }
 </script>
-<!-- Download the Calendar Icon: Go to the Flaticon site, search for the calendar -->
-<!-- icon you like, and download it. If the icons are provided under a free license-->
-<!-- they usually require attribution, and you should provide it somewhere appropriate in your app-->
 
 <style lang="scss" scoped>
-.home-screen {
-  background-color: $lighter;
+.large-screen {
+  height: 93vh;
+  display: flex;
+}
+
+.small-screen {
+  display: flex;
+  flex-direction: column;
 }
 
 .separator {
