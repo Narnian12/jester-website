@@ -16,14 +16,7 @@ const detailRows: DetailRow[] = [
   },
   {
     icon: 'place',
-    title: 'The Westin Resort & Spa, Cancun',
-    content1: 'Km 20.5, Blvd. Kukulcan, Zona Hotelera',
-    content2: '77500 Cancún, Q.R., Mexico'
-  },
-  {
-    icon: 'checkroom',
-    title: 'Black Tie Optional',
-    content1: 'What black tie is'
+    title: 'Springfield, IL'
   }
 ]
 
