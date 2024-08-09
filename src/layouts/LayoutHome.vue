@@ -1,7 +1,7 @@
 <!-- This is the homepage -->
 <template>
   <div class="home-layout">
-    <default-nav></default-nav>
+    <default-nav class="lt-md" />
     <!-- Your nav bar component -->
     <main>
       <slot />
@@ -17,7 +17,7 @@ import DefaultNav from './default/DefaultNav.vue' // Ensure the path is correct
 <style lang="scss">
 .home-layout {
   @media (min-width: 1024px) {
-    padding-top: 3.5em;
+    padding-top: 1em;
     background-color: $lighter;
   }
   @media (max-width: 1024px) {

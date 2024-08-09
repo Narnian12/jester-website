@@ -134,18 +134,7 @@ h6 {
 }
 
 .button {
-  background-color: $secondary;
-  padding: 1rem;
-  border: none;
-  color: #fff;
-  font-weight: 400;
-  display: block;
-  width: 75%;
-  text-align: center;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 5px;
-  margin: 0 auto;
+  @include button();
 }
 
 .button:hover {
