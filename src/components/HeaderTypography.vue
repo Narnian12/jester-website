@@ -26,7 +26,7 @@ defineProps({
   font-family: $header-font;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px;
+  font-size: 32px;
   color: $secondary;
 }
 </style>
