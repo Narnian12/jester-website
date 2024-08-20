@@ -9,8 +9,10 @@
           <div class="separator"></div>
           <header-typography id="details-lg" msg="Save the Date" />
           <detail-container />
+          <header-typography msg="More details to come" />
         </q-card-section>
       </q-card-section>
+      <!-- New section for the additional text -->
     </q-card>
   </div>
   <!-- This is for smaller screens (phones) -->
@@ -20,6 +22,10 @@
     <div class="separator"></div>
     <header-typography id="details-sm" msg="Save the Date" />
     <detail-container />
+    <!-- New div for the additional text -->
+    <div class="footer-text">
+      <header-typography msg="More details to come" />
+    </div>
   </div>
 </template>
 
