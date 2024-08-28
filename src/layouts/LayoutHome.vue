@@ -1,8 +1,6 @@
 <!-- This is the homepage -->
 <template>
   <div class="home-layout">
-    <default-nav class="lt-md" />
-    <!-- Your nav bar component -->
     <main>
       <slot />
       <!-- Where the page content will be injected -->
@@ -10,9 +8,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import DefaultNav from './default/DefaultNav.vue' // Ensure the path is correct
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 .home-layout {
