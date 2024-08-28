@@ -13,12 +13,15 @@
 <style lang="scss">
 .home-layout {
   @media (min-width: 1024px) {
-    padding-top: 1em;
+    padding-top: 1.1em;
     background-color: $lighter;
+    background-image: url('../assets/analog-clock-bg.jpg');
+    background-size: cover;
   }
   @media (max-width: 1024px) {
     padding-top: 2.5em;
     background-color: $lighter;
+    background-image: url('../assets/analog-clock-bg.jpg');
   }
 }
 </style>

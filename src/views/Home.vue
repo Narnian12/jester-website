@@ -3,13 +3,16 @@
   <div class="gt-sm large-screen q-pa-md row items-start q-gutter-md">
     <q-card class="my-card">
       <q-card-section horizontal>
-        <q-img src="https://cdn.quasar.dev/img/parallax1.jpg" />
+        <img src="@/assets/save-the-date.png" style="width: 430px" />
         <q-card-section>
           <header-typography id="home-lg" msg="J & P" />
           <div class="separator"></div>
           <header-typography id="details-lg" msg="Save the Date" />
           <detail-container />
-          <header-typography msg="More details to come" />
+          <p class="paragraph-style">
+            Formal online invite to follow.<br />If you would like a physical invite, please let us know
+            <a href="https://google.com" target="_blank">here</a>
+          </p>
         </q-card-section>
       </q-card-section>
       <!-- New section for the additional text -->
@@ -17,7 +20,7 @@
   </div>
   <!-- This is for smaller screens (phones) -->
   <div class="lt-md small-screen">
-    <img alt="Main Photo" src="@/assets/buckingham-fount.jpg" class="main-photo-mobile" />
+    <img alt="Main Photo" src="@/assets/save-the-date.png" class="main-photo-mobile" />
     <header-typography msg="J & P" />
     <div class="separator"></div>
     <header-typography id="details-sm" msg="Save the Date" />
@@ -70,5 +73,11 @@ export default {
 img.main-photo-mobile {
   height: auto;
   width: 100%;
+}
+
+.paragraph-style {
+  font-family: $header-font;
+  font-size: 16px;
+  text-align: center;
 }
 </style>
