@@ -2,13 +2,14 @@
   <div class="container section-container">
     <div class="scheduling">
       <q-timeline color="primary">
-        <template v-for="scheduleInfo in scheduleInfos" :key="scheduleInfo">
+        <!-- eslint-disable-next-line vue/valid-v-for -->
+        <div v-for="(scheduleInfo, i) in scheduleInfos" :key="i">
           <q-timeline-entry :title="scheduleInfo.event" :subtitle="scheduleInfo.time">
             <div v-if="scheduleInfo.additional">
               {{ scheduleInfo.additional }}
             </div>
           </q-timeline-entry>
-        </template>
+        </div>
       </q-timeline>
     </div>
   </div>
@@ -26,7 +27,7 @@ export default {
 <script setup lang="ts">
 defineProps({
   scheduleInfos: {
-    type: Object as PropType<ScheduleInfo[]>,
+    type: Array as PropType<ScheduleInfo[]>,
     default() {
       return []
     }

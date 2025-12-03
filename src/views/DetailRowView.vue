@@ -1,17 +1,16 @@
 <template>
   <div class="column no-wrap content-center">
-    <template v-for="detailRow in detailRows" :key="detailRow">
-      <q-card class="card-layout self-center">
-        <q-card-section class="card-content">
-          <span class="material-icons material-icons-override">{{ detailRow.icon }}</span>
-          <div class="text-container">
-            <div class="text-top">{{ detailRow.title }}</div>
-            <div class="text-bottom">{{ detailRow.content1 }}</div>
-            <div class="text-bottom">{{ detailRow.content2 }}</div>
-          </div>
-        </q-card-section>
-      </q-card>
-    </template>
+    <!-- eslint-disable-next-line vue/valid-v-for -->
+    <q-card v-for="(detailRow, i) in detailRows" :key="i" class="card-layout self-center">
+      <q-card-section class="card-content">
+        <span class="material-icons material-icons-override">{{ detailRow.icon }}</span>
+        <div class="text-container">
+          <div class="text-top">{{ detailRow.title }}</div>
+          <div class="text-bottom">{{ detailRow.content1 }}</div>
+          <div class="text-bottom">{{ detailRow.content2 }}</div>
+        </div>
+      </q-card-section>
+    </q-card>
   </div>
 </template>
 
@@ -28,7 +27,7 @@ export default {
 <script setup lang="ts">
 defineProps({
   detailRows: {
-    type: Object as PropType<DetailRow[]>,
+    type: Array as PropType<DetailRow[]>,
     default() {
       return []
     }

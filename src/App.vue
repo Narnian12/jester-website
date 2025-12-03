@@ -1,5 +1,5 @@
 <template>
-  <component :is="layout">
+  <component :is="_layout">
     <router-view />
   </component>
 </template>
@@ -9,7 +9,8 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const layout = computed(() => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _layout = computed(() => {
   // Format the layout name to match component file name
   return `Layout${route.meta.layout ? route.meta.layout : 'Default'}`
 })
