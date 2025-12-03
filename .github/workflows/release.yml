@@ -28,7 +28,7 @@ jobs:
       - name: Setup pnpm 📦
         uses: pnpm/action-setup@v2
         with:
-          version: 9.0.4
+          version: 9.0.5
 
       - name: Install dependencies 📦
         run: pnpm install
